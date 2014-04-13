@@ -47,7 +47,7 @@ public class ChatEventHandler extends TessEventHandler {
     }
 
     private void talkToNPC(TessNPC npc, Player player, String message) {
-        String talkMessage = "Jij -> " + npc.getName() + ": " + message;
+        String talkMessage = "You -> " + npc.getName() + ": " + message;
         String bystanderMessage = player.getName() + " -> " + npc.getName() + ": " + message;
 
 

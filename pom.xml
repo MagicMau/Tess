@@ -11,8 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <craftbukkit.version>1.7.5-R0.1-SNAPSHOT</craftbukkit.version>
-        <citizens.version>2.0.12-SNAPSHOT</citizens.version>
+        <craftbukkit.version>1.7.2-R0.3-SNAPSHOT</craftbukkit.version>
+        <citizens.version>2.0.11-SNAPSHOT</citizens.version>
         <build.number>Unknown</build.number>
         <BUILD_NUMBER>Unknown</BUILD_NUMBER>
     </properties>
@@ -85,10 +85,11 @@
             </resource>
         </resources>
         <plugins>
+<!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>1.5</version>
+                <version>3.0-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -111,6 +112,7 @@
                     </execution>
                 </executions>
             </plugin>
+-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

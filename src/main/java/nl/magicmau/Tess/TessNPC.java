@@ -11,6 +11,7 @@ import net.citizensnpcs.api.npc.NPCRegistry;
 import net.citizensnpcs.api.trait.Trait;
 import net.citizensnpcs.api.util.DataKey;
 import nl.magicmau.Tess.midi.MidiUtil;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -56,6 +57,16 @@ public class TessNPC implements NPC {
         if (file.exists()) {
             MidiUtil.playMidi(file, 1, npc.getEntity().getLocation());
         }
+    }
+
+    /**
+     * Schedules a task to run in x ticks (20 ticks per second in Minecraft).
+     * @param methodName
+     * @param args
+     * @param ticks
+     */
+    public void scheduleMethod(String methodName, Object[] args, long ticks) {
+        Bukkit.getScheduler().scheduleSyncDelayedTask(tess, () -> triggerEvent(methodName, args), ticks);
     }
 
     public Location getLocation() {
