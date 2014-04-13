@@ -1,0 +1,10 @@
+name: Tess
+author: MagicMau
+version: ${project.version} (build ${BUILD_NUMBER})
+main: nl.magicmau.Tess.Tess
+depend: [Citizens]
+
+commands:
+  tess:
+    description: Lists tess commands.
+    usage: /tess help
